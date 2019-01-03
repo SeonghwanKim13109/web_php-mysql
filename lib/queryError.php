@@ -1,4 +1,4 @@
 <?php
-if(!result)
+if(!$result)
   echo mysqli_error($conn);
  ?>

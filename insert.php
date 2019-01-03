@@ -7,13 +7,15 @@
 //1. connection
   $conn = mysqli_connect("localhost","root","show13109","phpsql");
 //2.
+  // require_once('process/create_process');
   $sql = "
-    INSER INTO topic
+    INSERT INTO topic
       (title, description, date)
-        VALUES (
-          'MySql','MySql is ...', NOW()
+        VALUES ("
+          .$title.",".$description.",NOW()
         )";
   // echo $sql;
   $result = mysqli_query($conn,$sql);
-  require_once('lib/checkError.php');
+  // echo $result;
+  require_once('lib/queryError.php');
  ?>
