@@ -5,11 +5,15 @@
 // echo $row['_msg'];
 
 //1. connection
-$conn = mysqli_connect("localhost","root","show13109","phpsql");
+  $conn = mysqli_connect("localhost","root","show13109","phpsql");
 //2.
-$sql = "
-INSERT INTO topic
-(title, description, date)
-VALUES ('MySql','MySql is ...', NOW())";
-mysqli_query($conn,$sql);
+  $sql = "
+    INSER INTO topic
+      (title, description, date)
+        VALUES (
+          'MySql','MySql is ...', NOW()
+        )";
+  // echo $sql;
+  $result = mysqli_query($conn,$sql);
+  require_once('lib/checkError.php');
  ?>
