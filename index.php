@@ -1,7 +1,10 @@
 <?php
   require_once('view/upper.php');
+  require_once('lib/printList.php');
+  ?>
+</ol>
+<?php
   require_once('view/manupulate.php');
- ?>
-    <h2>Welcome</h2>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-<?php require_once('view/bottom.php'); ?>
+  require_once('lib/printContent.php');
+  require_once('view/bottom.php');
+  ?>
