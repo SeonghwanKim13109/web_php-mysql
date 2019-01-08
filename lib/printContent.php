@@ -8,7 +8,9 @@
   else{
     require_once('connection.php');
     //prevention sql injection
+
     $filtered_id = mysqli_real_escape_string($conn,$_GET['id']);
+
     $sql = "
       SELECT * FROM topic WHERE id={$filtered_id}
       ";
@@ -16,7 +18,11 @@
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result);
 
-    echo "<h2>{$row['title']}</h2>";
-    echo $row['description'];
+    $escaped_title =htmlspecialchars($row['title']);
+
+    $escaped_description = htmlspecialchars($row['description']);
+
+    echo "<h2>{$escaped_title}</h2>";
+    echo $escaped_description;
   }
  ?>
