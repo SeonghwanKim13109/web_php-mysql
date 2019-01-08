@@ -7,8 +7,10 @@
   }
   else{
     require_once('connection.php');
+    //prevention sql injection
+    $filtered_id = mysqli_real_escape_string($conn,$_GET['id']);
     $sql = "
-      SELECT * FROM topic WHERE id={$_GET['id']}
+      SELECT * FROM topic WHERE id={$filtered_id}
       ";
     // echo $sql;
     $result = mysqli_query($conn,$sql);

@@ -1,4 +1,7 @@
-<?php require_once('../view/upper.php'); ?>
+<?php
+  require_once('../view/upper.php');
+  require_once('printList.php'); 
+?>
   <form
   action="../process/create_process.php" method="post">
     <p> <input type="text" name="title" placeholder="title"> </p>

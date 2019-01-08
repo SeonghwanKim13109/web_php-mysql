@@ -5,5 +5,5 @@
     <title>WEB</title>
   </head>
   <body>
-    <h1> WEB</h1>
+    <h1> <a href="index.php">WEB</a></h1>
     <ol>

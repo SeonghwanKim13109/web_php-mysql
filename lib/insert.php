@@ -6,11 +6,19 @@
   require_once('connection.php');
 //2.
   // require_once('process/create_process');
+  $filtered = array(
+    'title'=>mysqli_real_escape_string($conn,
+    $title),
+    'description'=>mysqli_real_escape_string(
+      $conn,$description
+    )
+  );
+
   $sql = "
   INSERT INTO topic
      (title, description, date)
-       VALUES (\"{$title}\"
-       , \"{$description}\"
+       VALUES (\"{$filtered['title']}\"
+       , \"{$filtered['description']}\"
        , NOW()
        )";
   // echo $sql;
