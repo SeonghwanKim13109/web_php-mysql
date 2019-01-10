@@ -6,13 +6,8 @@
   require_once('connection.php');
 //2.
   // require_once('process/create_process');
-  $filtered = array(
-    'title'=>mysqli_real_escape_string($conn,
-    $title),
-    'description'=>mysqli_real_escape_string(
-      $conn,$description
-    )
-  );
+
+  require_once('../process/filter.php');
 
   $sql = "
   INSERT INTO topic

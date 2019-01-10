@@ -9,7 +9,7 @@
   //더 이상 fetch할게 없을 때는 NULL을 반환
 
   while($row = mysqli_fetch_array($result)){
-    
+
     $escaped_title =htmlspecialchars($row['title']);
 
     echo "<li><a href = \"index.php?id="
