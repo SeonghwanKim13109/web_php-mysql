@@ -11,10 +11,10 @@
 
   $sql = "
   INSERT INTO topic
-     (title, description, date)
+     (title, description, date, author_id)
        VALUES (\"{$filtered['title']}\"
        , \"{$filtered['description']}\"
-       , NOW()
+       , NOW(), \"{$author_id}\"
        )";
   // echo $sql;
   $result = mysqli_query($conn,$sql);
