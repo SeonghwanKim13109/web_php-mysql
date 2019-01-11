@@ -1,5 +1,8 @@
 <?php
   require_once('view/upper.php');
+?>
+<ol>
+<?php 
   require_once('lib/printList.php');
   ?>
 </ol>
